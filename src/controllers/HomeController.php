@@ -6,7 +6,7 @@ use \core\Controller;
 class HomeController extends Controller {
 
     public function index() {
-        $this->render('home', ['nome' => 'Bonieky']);
+        $this->render('home');
     }
 
     public function sobre() {
@@ -17,4 +17,7 @@ class HomeController extends Controller {
         print_r($args);
     }
 
+    public function fotos(){
+        echo "Opa, fotos?";
+    }
 }
