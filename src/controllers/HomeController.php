@@ -10,6 +10,11 @@ class HomeController extends Controller {
         $this->render('home');
     }
 
+    public function foto($idfoto){
+        echo "Foto: ".$idfoto['id'];
+    
+    }
+
     public function perfil(){
         $this->render('perfil');
     }

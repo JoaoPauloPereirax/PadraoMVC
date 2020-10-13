@@ -7,6 +7,7 @@ $router->get('/fotos','HomeController@fotos');
 //HomeController = nome do controller
 //Depois do @ colocamos o método
 $router->get('/perfil','HomeController@perfil');
+$router->get('/foto/{id}','HomeController@foto');
 
 $router->get('/', 'HomeController@index');
 $router->get('/sobre/{nome}', 'HomeController@sobreP');
