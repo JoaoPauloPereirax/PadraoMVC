@@ -6,7 +6,12 @@ use \core\Controller;
 class HomeController extends Controller {
 
     public function index() {
+        //para carregar um view usamos
         $this->render('home');
+    }
+
+    public function perfil(){
+        $this->render('perfil');
     }
 
     public function sobre() {
