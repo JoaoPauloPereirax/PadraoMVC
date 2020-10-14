@@ -3,12 +3,10 @@ use core\Router;
 
 $router = new Router();
 
-$router->get('/fotos','HomeController@fotos');
+$router->get('/','HomeController@index');
 //HomeController = nome do controller
 //Depois do @ colocamos o método
-$router->get('/perfil','HomeController@perfil');
-$router->get('/foto/{id}','HomeController@foto');
 
-$router->get('/', 'HomeController@index');
-$router->get('/sobre/{nome}', 'HomeController@sobreP');
-$router->get('/sobre', 'HomeController@sobre');
+//rota para  a página de adição
+$router->get('/novo', 'UsuariosController@add');
+$router->post('/novo', 'UsuariosController@addaction');
