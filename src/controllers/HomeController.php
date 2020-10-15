@@ -2,25 +2,22 @@
 namespace src\controllers;
 
 use \core\Controller;
+use \src\models\Usuario;
 
 class HomeController extends Controller {
 
     public function index() {
-
-        $posts=[
-            ['titulo' => 'Título teste 1', 'corpo' => 'Corpo de teste 1'],
-            ['titulo' => 'Título teste 2', 'corpo' => 'Corpo de teste 2'],
-            ['titulo' => 'Título teste 3', 'corpo' => 'Corpo de teste 3'],
-            ['titulo' => 'Título teste 4', 'corpo' => 'Corpo de teste 4']
-        ];
-
-        $nome="João Paulo Pereira";
+        //armazenando os dados em uma variável
+        $usuarios = Usuario::select()->execute();
+        
         //para carregar um view usamos
+        //$this->render('home');
+
+        //disponibilizando a lista para a página
         $this->render('home',[
-            'nome' => $nome,
-            'idade' =>24,
-            'posts' => $posts
+            'usuarios' => $usuarios
         ]);
+
     }
 
     public function foto($idfoto){

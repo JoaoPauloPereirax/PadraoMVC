@@ -9,4 +9,13 @@ $router->get('/','HomeController@index');
 
 //rota para  a página de adição
 $router->get('/novo', 'UsuariosController@add');
-$router->post('/novo', 'UsuariosController@addaction');
+
+//rota para ação "adicionar usuário"
+$router->post('/novo', 'UsuariosController@addAction');
+
+//rota para editar usuário
+$router->get('/usuario/{id}/edit','UsuariosController@edit');
+$router->post('/usuario/{id}/edit','UsuariosController@editAction');
+
+//rota para excluir usuário
+$router->get('/usuario/{id}/excluir','UsuariosController@del');
