@@ -61,6 +61,7 @@ class UsuariosController extends Controller {
     }
 
     public function del($args){
-        echo 'Deletar o usuário'.$args['id'];
+       Usuario::delete()->where('id',$args['id'])->execute();
+        $this->redirect('/');
     }
 }
